@@ -7,10 +7,10 @@ que tem e puder escolher qual ler.
 
 Tabelas :
 
-Tabela de Utilizador;
-
 Tabela de Livros( Mangá);
 
 Tabela de Favoritos;
 
 Tabela de Destaque;
+
+

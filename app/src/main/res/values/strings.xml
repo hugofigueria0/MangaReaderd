@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MangaReaderd</string>
+    <string name="title_activity_destaques">Destaques</string>
+    <string name="title_activity_favoritos">Favoritos</string>
+    <string name="title_activity_livros_manga">LivrosManga</string>
 </resources>

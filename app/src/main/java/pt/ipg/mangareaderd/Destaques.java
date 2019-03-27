@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 public class Destaques extends AppCompatActivity {
 
@@ -15,16 +16,30 @@ public class Destaques extends AppCompatActivity {
         setContentView(R.layout.activity_destaques);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    public void Validar(View view){
+        ValidarEscrita();
+
+    }
+
+    public void ValidarEscrita(){
+        EditText editTextProcura = (EditText) findViewById(R.id.TextoProcura);
+        String Busca = editTextProcura.getText().toString();
+
+        EditText editTextGenero = (EditText) findViewById(R.id.TextoGenero);
+        String Tgeneros = editTextGenero.getText().toString();
+
+        if(Busca.trim().length() == 0){
+            editTextProcura.setError("Escreva o que procura!");
+            editTextProcura.requestFocus();
+        }
+        if(Busca.trim().length() == 0){
+            editTextGenero.setError("Escreva o que procura!");
+            editTextGenero.requestFocus();
+            return;
+        }
+
+    }
 }

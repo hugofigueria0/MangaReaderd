@@ -3,4 +3,7 @@
     <string name="title_activity_destaques">Destaques</string>
     <string name="title_activity_favoritos">Favoritos</string>
     <string name="title_activity_livros_manga">LivrosManga</string>
+    <string name="destaques">Destaques</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="manga">Mangá</string>
 </resources>

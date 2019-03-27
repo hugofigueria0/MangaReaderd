@@ -14,7 +14,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="ZonaDeDestaques"
-        android:text="Destaques"
+        android:text="@string/destaques"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -28,7 +28,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="ZonaDosFavoritos"
-        android:text="Favoritos"
+        android:text="@string/favoritos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Mangá"
         app:layout_constraintStart_toEndOf="@+id/Destaques" />
@@ -41,7 +41,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="LivrosManga"
-        android:text="Mangá"
+        android:text="@string/manga"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -6,4 +6,9 @@
     <string name="destaques">Destaques</string>
     <string name="favoritos">Favoritos</string>
     <string name="manga">Mangá</string>
+    <string name="procura">Procura:</string>
+    <string name="g_nero">Género:</string>
+    <string name="validar">Validar</string>
+    <string name="escreva_aqui_24">Escreva aqui 24</string>
+    <string name="escreva_aqui_veado">Escreva aqui veado</string>
 </resources>

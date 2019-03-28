@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".DestaquesProcura"
+            android:label="@string/title_activity_destaques_procura"
+            android:parentActivityName=".Destaques"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.mangareaderd.Destaques" />
+        </activity>
+        <activity
             android:name=".LivrosManga"
             android:label="@string/title_activity_livros_manga"
             android:parentActivityName=".MainActivity"

@@ -11,4 +11,6 @@
     <string name="validar">Validar</string>
     <string name="escreva_aqui_24">Escreva aqui 24</string>
     <string name="escreva_aqui_veado">Escreva aqui veado</string>
+    <string name="title_activity_destaques_procura">DestaquesProcura</string>
+    <string name="procura_Destaques">Procura</string>
 </resources>

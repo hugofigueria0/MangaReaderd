@@ -13,4 +13,5 @@
     <string name="escreva_aqui_veado">Escreva aqui veado</string>
     <string name="title_activity_destaques_procura">DestaquesProcura</string>
     <string name="procura_Destaques">Procura</string>
+    <string name="cancelar">Cancelar</string>
 </resources>

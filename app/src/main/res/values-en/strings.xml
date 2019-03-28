@@ -14,4 +14,6 @@
     <string name="escreva_aqui_veado">Write Here</string>
     <string name="title_activity_destaques_procura">HighlightsSearch</string>
     <string name="procura_Destaques">Search</string>
+    <string name="cancelar">Cancel</string>
+    <string name="Arvore">You open zone of highlights</string>
 </resources>

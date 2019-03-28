@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MangaReaderd</string>
+    <string name="title_activity_destaques">Highlights</string>
+    <string name="title_activity_favoritos">Favorites</string>
+    <string name="title_activity_livros_manga">Mangá</string>
+    <string name="destaques">Highlights</string>
+    <string name="favoritos">Favorites</string>
+    <string name="manga">Mangá</string>
+    <string name="procura">Search:</string>
+    <string name="g_nero">Genre:</string>
+    <string name="validar">Validate</string>
+    <string name="escreva_aqui_24">Write Here</string>
+    <string name="escreva_aqui_veado">Write Here</string>
+    <string name="title_activity_destaques_procura">HighlightsSearch</string>
+    <string name="procura_Destaques">Search</string>
+</resources>

@@ -22,7 +22,7 @@ public class Destaques extends AppCompatActivity {
     }
 
     public void Procura(View view){
-        Toast.makeText(this, R.string.Tronco, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.ProcuraDestaques, Toast.LENGTH_LONG).show();
         Intent intent = new Intent( this, DestaquesProcura.class);
         startActivity(intent);
 

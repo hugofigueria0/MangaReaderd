@@ -15,20 +15,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void ZonaDeDestaques(View view){
-        Toast.makeText(this, (R.string.Arvore), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, (R.string.AbriuZona), Toast.LENGTH_LONG).show();
         Intent intent = new Intent( this, Destaques.class);
         startActivity(intent);
 
     }
     public void ZonaDosFavoritos(View view){
-        Toast.makeText(this, (R.string.Ramo), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, (R.string.AbriuFavoritos), Toast.LENGTH_LONG).show();
         Intent intent = new Intent( this, Favoritos.class);
         startActivity(intent);
 
 
     }
     public void LivrosManga(View view){
-        Toast.makeText(this, (R.string.Folha), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, (R.string.AbriuLivros), Toast.LENGTH_LONG).show();
         Intent intent = new Intent( this, LivrosManga.class);
         startActivity(intent);
 

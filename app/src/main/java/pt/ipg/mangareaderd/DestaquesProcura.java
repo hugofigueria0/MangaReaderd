@@ -37,7 +37,7 @@ public class DestaquesProcura extends AppCompatActivity {
 
         if(Busca.trim().length() == 0){
 
-            editTextProcura.setError(getString(R.string.Raizes));
+            editTextProcura.setError(getString(R.string.Escrever));
             editTextProcura.requestFocus();
             return;
 
@@ -45,7 +45,7 @@ public class DestaquesProcura extends AppCompatActivity {
         }
         if(Tgeneros.trim().length() == 0){
 
-            editTextGenero.setError(getString(R.string.Cauda));
+            editTextGenero.setError(getString(R.string.Escrever));
             editTextGenero.requestFocus();
             return;
 
@@ -55,7 +55,7 @@ public class DestaquesProcura extends AppCompatActivity {
     }
 
     public void Cancelar(View view){
-        Toast.makeText(this, R.string.Fotossintese, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.Cancelou, Toast.LENGTH_LONG).show();
         finish();
     }
 

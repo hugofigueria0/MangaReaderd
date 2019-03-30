@@ -16,4 +16,10 @@
     <string name="procura_Destaques">Search</string>
     <string name="cancelar">Cancel</string>
     <string name="Arvore">You open zone of highlights</string>
+    <string name="Ramo">You open zone of favorites</string>
+    <string name="Folha">Everything</string>
+    <string name="Fotossintese">Cancel</string>
+    <string name="Raizes">Write here</string>
+    <string name="Cauda">Write here</string>
+    <string name="Tronco">Search on HighLights</string>
 </resources>

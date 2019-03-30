@@ -40,7 +40,7 @@ public class Adicionar extends AppCompatActivity {
 
         if(Livro.trim().length() == 0){
 
-            editLivroDaMangá.setError(getString(R.string.Raizes));
+            editLivroDaMangá.setError(getString(R.string.Nome));
             editLivroDaMangá.requestFocus();
             return;
 
@@ -48,14 +48,14 @@ public class Adicionar extends AppCompatActivity {
         }
         if(Genero.trim().length() == 0){
 
-            editAdicionar_Genero.setError(getString(R.string.Cauda));
+            editAdicionar_Genero.setError(getString(R.string.EscrevaGenero));
             editAdicionar_Genero.requestFocus();
             return;
 
         }
         if(Data.trim().length() == 0){
 
-            editAdicionar_Data.setError(getString(R.string.Cauda));
+            editAdicionar_Data.setError(getString(R.string.AdicionarData));
             editAdicionar_Data.requestFocus();
             return;
 
@@ -65,7 +65,7 @@ public class Adicionar extends AppCompatActivity {
     }
 
     public void Cancelar(View view){
-        Toast.makeText(this, R.string.Fotossintese, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.cancelar, Toast.LENGTH_LONG).show();
         finish();
     }
 

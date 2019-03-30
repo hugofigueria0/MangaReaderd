@@ -30,4 +30,8 @@
     <string name="data">Data:</string>
     <string name="adicionar_a_data">Adicionar a data</string>
     <string name="cancelar">Cancelar</string>
+    <string name="adicionar_livro">Adicionar Livro</string>
+    <string name="Nome">Escreva aqui o nome</string>
+    <string name="EscrevaGenero">Escreva aqui o genero</string>
+    <string name="AdicionarData">Adicionar Data</string>
 </resources>

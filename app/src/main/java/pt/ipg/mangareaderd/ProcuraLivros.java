@@ -1,6 +1,5 @@
 package pt.ipg.mangareaderd;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,15 +9,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class DestaquesProcura extends AppCompatActivity {
+public class ProcuraLivros extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_destaques_procura);
+        setContentView(R.layout.activity_procura_livros);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
     }
 
     public void Validar(View view){
@@ -29,24 +27,24 @@ public class DestaquesProcura extends AppCompatActivity {
 
     public void ValidarEscrita(){
 
-        EditText edittextoProcura = (EditText) findViewById(R.id.textoProcura);
-        String Busca = edittextoProcura.getText().toString();
+        EditText edittextProcuraLivros = (EditText) findViewById(R.id.textProcuraLivros);
+        String Livro = edittextProcuraLivros.getText().toString();
 
-        EditText edittextoGenero = (EditText) findViewById(R.id.textoGenero);
-        String Tgeneros = edittextoGenero.getText().toString();
+        EditText editTextProcuraGenero = (EditText) findViewById(R.id.TextProcuraGenero);
+        String Tgeneros = editTextProcuraGenero.getText().toString();
 
-        if(Busca.trim().length() == 0){
+        if(Livro.trim().length() == 0){
 
-            edittextoProcura.setError(getString(R.string.Escrever));
-            edittextoProcura.requestFocus();
+            edittextProcuraLivros.setError(getString(R.string.Escrever));
+            edittextProcuraLivros.requestFocus();
             return;
 
 
         }
         if(Tgeneros.trim().length() == 0){
 
-            edittextoGenero.setError(getString(R.string.Escrever));
-            edittextoGenero.requestFocus();
+            editTextProcuraGenero.setError(getString(R.string.Escrever));
+            editTextProcuraGenero.requestFocus();
             return;
 
         }
@@ -59,9 +57,8 @@ public class DestaquesProcura extends AppCompatActivity {
         finish();
     }
 
-    public void Confirmar(View view){
+    public void validar2(View view){
         Toast.makeText(this, R.string.validar, Toast.LENGTH_LONG).show();
         finish();
     }
-
 }

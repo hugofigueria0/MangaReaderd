@@ -26,4 +26,18 @@ public class LivrosManga extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void Procura(View view){
+        Toast.makeText(this, R.string.EntrouProcura, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent( this, ProcuraLivros.class);
+        startActivity(intent);
+
+    }
+
+
+    public void Voltar(View view){
+        Toast.makeText(this, R.string.Voltar, Toast.LENGTH_LONG).show();
+        finish();
+    }
+
 }

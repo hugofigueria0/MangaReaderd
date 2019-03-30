@@ -34,4 +34,8 @@
     <string name="Nome">Escreva aqui o nome</string>
     <string name="EscrevaGenero">Escreva aqui o genero</string>
     <string name="AdicionarData">Adicionar Data</string>
+    <string name="Voltar">Voltou para trás</string>
+    <string name="voltar_atr_s">Voltar Atrás</string>
+    <string name="title_activity_procura_livros">ProcuraLivros</string>
+    <string name="EntrouProcura">Entrou na procura</string>
 </resources>

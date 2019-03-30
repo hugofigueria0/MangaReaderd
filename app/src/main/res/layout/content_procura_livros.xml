@@ -5,55 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".DestaquesProcura"
-    tools:showIn="@layout/activity_destaques_procura">
+    tools:context=".ProcuraLivros"
+    tools:showIn="@layout/activity_procura_livros">
 
     <TextView
-        android:id="@+id/procura"
+        android:id="@+id/ProcuraLivros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="36dp"
         android:text="@string/procura"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textoProcura"
+        android:id="@+id/textProcuraLivros"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:hint="@string/escreva_aqui"
-        android:inputType="textShortMessage|textAutoCorrect"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/procura"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/genero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/g_nero"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/procura" />
-
-    <EditText
-        android:id="@+id/textoGenero"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
@@ -61,42 +33,62 @@
         android:inputType="textShortMessage|textAutoCorrect"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/genero"
-        app:layout_constraintTop_toBottomOf="@+id/textoProcura" />
+        app:layout_constraintStart_toEndOf="@+id/ProcuraLivros"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/Confirmar"
+    <TextView
+        android:id="@+id/ProcuraGenero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/g_nero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProcuraLivros" />
+
+    <EditText
+        android:id="@+id/TextProcuraGenero"
+        android:layout_width="314dp"
+        android:layout_height="41dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:onClick="Confirmar"
-        android:text="@string/validar"
+        android:ems="10"
+        android:hint="@string/escreva_aqui"
+        android:inputType="textShortMessage|textAutoCorrect"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoGenero" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ProcuraGenero"
+        app:layout_constraintTop_toBottomOf="@+id/textProcuraLivros" />
 
     <Button
-        android:id="@+id/Cancelar"
+        android:id="@+id/validar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="92dp"
+        android:onClick="Validar"
+        android:text="@string/validar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ProcuraGenero" />
+
+    <Button
+        android:id="@+id/cancelar"
         android:layout_width="wrap_content"
         android:layout_height="49dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
-        android:layout_marginBottom="448dp"
+        android:layout_marginBottom="388dp"
         android:onClick="Cancelar"
         android:text="@string/cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.943"
-        app:layout_constraintStart_toEndOf="@+id/Confirmar"
-        app:layout_constraintTop_toBottomOf="@+id/textoGenero"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/ProcuraGenero"
+        app:layout_constraintVertical_bias="0.947" />
 
 </android.support.constraint.ConstraintLayout>

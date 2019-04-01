@@ -22,7 +22,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/button_background"
+        />
 
     <Button
         android:id="@+id/Procura"
@@ -38,7 +40,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Adicionar" />
+        app:layout_constraintTop_toBottomOf="@+id/Adicionar"
+        android:background="@drawable/button_background"
+        />
 
     <Button
         android:id="@+id/Voltar"
@@ -54,5 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Procura" />
+        app:layout_constraintTop_toBottomOf="@+id/Procura"
+        android:background="@drawable/button_background"
+        />
 </android.support.constraint.ConstraintLayout>

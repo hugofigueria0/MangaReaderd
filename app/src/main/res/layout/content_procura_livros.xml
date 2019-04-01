@@ -86,7 +86,9 @@
         android:onClick="Validar"
         android:text="@string/validar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        android:background="@drawable/button_background"
+        />
 
     <Button
         android:id="@+id/cancelar"
@@ -102,6 +104,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.757"
         app:layout_constraintStart_toEndOf="@+id/validar2"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        android:background="@drawable/button_background"
+        />
 
 </android.support.constraint.ConstraintLayout>

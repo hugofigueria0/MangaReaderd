@@ -16,7 +16,9 @@
         android:onClick="ZonaDeDestaques"
         android:text="@string/destaques"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:background="@drawable/button_background"
+        />
 
     <Button
         android:id="@+id/Favoritos"
@@ -31,7 +33,9 @@
         android:text="@string/favoritos"
         app:layout_constraintEnd_toStartOf="@+id/Mangá"
         app:layout_constraintStart_toEndOf="@+id/Destaques"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:background="@drawable/button_background"
+        />
 
     <Button
         android:id="@+id/Mangá"
@@ -43,7 +47,9 @@
         android:onClick="LivrosManga"
         android:text="@string/manga"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:background="@drawable/button_background"
+        />
 
     <ImageView
         android:id="@+id/imageView"
@@ -59,7 +65,8 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/db0ac2b864fd8ef3cb716e807a19121b_icon" />
+        app:srcCompat="@drawable/db0ac2b864fd8ef3cb716e807a19121b_icon"
+        />
 
     <Button
         android:id="@+id/Opcoes"
@@ -71,12 +78,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="100dp"
+        android:background="@drawable/button_background"
         android:onClick="Opcoes"
         android:text="@string/op_es"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.544"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Favoritos"
-        app:layout_constraintVertical_bias="0.401" />
+        app:layout_constraintVertical_bias="0.744" />
 </android.support.constraint.ConstraintLayout>

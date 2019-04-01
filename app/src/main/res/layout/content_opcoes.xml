@@ -22,7 +22,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/button_background"
+        />
 
     <Button
         android:id="@+id/Fechar"
@@ -39,5 +41,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Eliminar" />
+        app:layout_constraintTop_toBottomOf="@+id/Eliminar"
+        android:background="@drawable/button_background"
+        />
 </android.support.constraint.ConstraintLayout>

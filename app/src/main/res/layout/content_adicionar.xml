@@ -125,7 +125,9 @@
         android:onClick="AdicionarLivro"
         android:text="@string/adicionar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/button_background"
+        />
 
     <Button
         android:id="@+id/Cancelar"
@@ -141,6 +143,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.55"
-        app:layout_constraintStart_toEndOf="@+id/AdicionarLivro" />
+        app:layout_constraintStart_toEndOf="@+id/AdicionarLivro"
+        android:background="@drawable/button_background"
+        />
 
 </android.support.constraint.ConstraintLayout>

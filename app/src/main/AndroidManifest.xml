@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Eliminar"
+            android:label="@string/title_activity_eliminar"
+            android:parentActivityName=".Opcoes"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.mangareaderd.Opcoes" />
+        </activity>
+        <activity
+            android:name=".Opcoes"
+            android:label="@string/title_activity_opcoes"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.mangareaderd.MainActivity" />
+        </activity>
+        <activity
             android:name=".ProcuraLivros"
             android:label="@string/title_activity_procura_livros"
             android:parentActivityName=".LivrosManga"

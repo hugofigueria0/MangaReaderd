@@ -27,6 +27,12 @@ public class DestaquesProcura extends AppCompatActivity {
 
     }
 
+    public void Confirmar(View view){
+        ValidarEscrita();
+        Toast.makeText(this, R.string.validar, Toast.LENGTH_LONG).show();
+
+
+    }
     public void ValidarEscrita(){
 
         EditText edittextoProcura = (EditText) findViewById(R.id.textoProcura);
@@ -51,6 +57,7 @@ public class DestaquesProcura extends AppCompatActivity {
 
         }
 
+        finish();
 
     }
 
@@ -59,9 +66,6 @@ public class DestaquesProcura extends AppCompatActivity {
         finish();
     }
 
-    public void Confirmar(View view){
-        Toast.makeText(this, R.string.validar, Toast.LENGTH_LONG).show();
-        finish();
-    }
+
 
 }

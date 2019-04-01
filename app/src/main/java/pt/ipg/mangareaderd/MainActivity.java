@@ -34,6 +34,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void Opcoes(View view){
+
+        Toast.makeText(this, (R.string.Opcoes), Toast.LENGTH_LONG).show();
+        Intent intent = new Intent( this, Opcoes.class);
+        startActivity(intent);
+
+    }
+
+
 
 
 }

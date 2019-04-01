@@ -29,7 +29,6 @@
     <string name="escreva_o_g_nero">Escreva o género</string>
     <string name="data">Data:</string>
     <string name="adicionar_a_data">Adicionar a data</string>
-    <string name="cancelar">Cancelar</string>
     <string name="adicionar_livro">Adicionar Livro</string>
     <string name="Nome">Escreva aqui o nome</string>
     <string name="EscrevaGenero">Escreva aqui o genero</string>
@@ -38,4 +37,13 @@
     <string name="voltar_atr_s">Voltar Atrás</string>
     <string name="title_activity_procura_livros">ProcuraLivros</string>
     <string name="EntrouProcura">Entrou na procura</string>
+    <string name="hint">hint</string>
+    <string name="title_activity_opcoes">Opcoes</string>
+    <string name="Opcoes">Abriu a seccção dos Opçôes</string>
+    <string name="op_es">Opções</string>
+    <string name="title_activity_eliminar">Eliminar</string>
+    <string name="title_activity_cancelar_2">Cancelar_2</string>
+    <string name="Elimiar">Abriu a opção eliminar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="cancelar2">Cancelar</string>
 </resources>

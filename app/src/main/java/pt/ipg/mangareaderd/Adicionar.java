@@ -27,6 +27,13 @@ public class Adicionar extends AppCompatActivity {
 
     }
 
+    public void AdicionarLivro(View view){
+
+        Toast.makeText(this, R.string.Adicionou, Toast.LENGTH_LONG).show();
+        ValidarEscrita();
+
+    }
+
     public void ValidarEscrita(){
 
         EditText editLivroDaMangá = (EditText) findViewById(R.id.LivroDaMangá);
@@ -61,12 +68,11 @@ public class Adicionar extends AppCompatActivity {
 
         }
 
+        finish();
 
     }
-    public void AdicionarLivro(View view){
-        Toast.makeText(this, R.string.Adicionou, Toast.LENGTH_LONG).show();
-        finish();
-    }
+
+
 
     public void Cancelar(View view){
         Toast.makeText(this, R.string.cancelar, Toast.LENGTH_LONG).show();

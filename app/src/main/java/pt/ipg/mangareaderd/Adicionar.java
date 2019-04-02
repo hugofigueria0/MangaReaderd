@@ -21,23 +21,20 @@ public class Adicionar extends AppCompatActivity {
 
     }
 
-    public void Validar(View view){
 
-        ValidarEscrita();
-
-    }
 
     public void AdicionarLivro(View view){
 
-        Toast.makeText(this, R.string.Adicionou, Toast.LENGTH_LONG).show();
         ValidarEscrita();
+        Toast.makeText(this, R.string.Adicionou, Toast.LENGTH_LONG).show();
+
 
     }
 
     public void ValidarEscrita(){
 
-        EditText editLivroDaMangá = (EditText) findViewById(R.id.LivroDaMangá);
-        String Livro = editLivroDaMangá.getText().toString();
+        EditText editLivroDaManga = (EditText) findViewById(R.id.LivroDaManga);
+        String Livro = editLivroDaManga.getText().toString();
 
         EditText editAdicionar_Genero = (EditText) findViewById(R.id.Adicionar_Genero);
         String Genero = editAdicionar_Genero.getText().toString();
@@ -47,8 +44,8 @@ public class Adicionar extends AppCompatActivity {
 
         if(Livro.trim().length() == 0){
 
-            editLivroDaMangá.setError(getString(R.string.Nome));
-            editLivroDaMangá.requestFocus();
+            editLivroDaManga.setError(getString(R.string.Nome));
+            editLivroDaManga.requestFocus();
             return;
 
 
@@ -67,6 +64,7 @@ public class Adicionar extends AppCompatActivity {
             return;
 
         }
+        
 
         finish();
 
@@ -78,5 +76,6 @@ public class Adicionar extends AppCompatActivity {
         Toast.makeText(this, R.string.cancelar, Toast.LENGTH_LONG).show();
         finish();
     }
+
 
 }

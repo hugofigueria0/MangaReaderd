@@ -46,4 +46,6 @@
     <string name="Elimiar">Abriu a opção eliminar</string>
     <string name="eliminar">Eliminar</string>
     <string name="cancelar2">Cancelar</string>
+    <string name="title_activity_ver_adicionar">VerAdicionar</string>
+    <string name="adicionou">Adicionou:</string>
 </resources>

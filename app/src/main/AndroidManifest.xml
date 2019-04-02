@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".VerAdicionar"
+            android:label="@string/title_activity_ver_adicionar"
+            android:parentActivityName=".Adicionar"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.mangareaderd.Adicionar" />
+        </activity>
+        <activity
             android:name=".Eliminar"
             android:label="@string/title_activity_eliminar"
             android:parentActivityName=".Opcoes"

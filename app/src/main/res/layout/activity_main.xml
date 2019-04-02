@@ -10,46 +10,42 @@
         android:id="@+id/Destaques"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button_background"
         android:onClick="ZonaDeDestaques"
         android:text="@string/destaques"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:background="@drawable/button_background"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/Favoritos"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_width="118dp"
+        android:layout_height="62dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/button_background"
         android:onClick="ZonaDosFavoritos"
         android:text="@string/favoritos"
         app:layout_constraintEnd_toStartOf="@+id/Mangá"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toEndOf="@+id/Destaques"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:background="@drawable/button_background"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/Mangá"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/button_background"
         android:onClick="LivrosManga"
         android:text="@string/manga"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        android:background="@drawable/button_background"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -70,21 +66,17 @@
 
     <Button
         android:id="@+id/Opcoes"
-        android:layout_width="wrap_content"
+        android:layout_width="113dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginRight="156dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/button_background"
         android:onClick="Opcoes"
         android:text="@string/op_es"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Favoritos"
-        app:layout_constraintVertical_bias="0.744" />
+        app:layout_constraintVertical_bias="0.482" />
 </android.support.constraint.ConstraintLayout>

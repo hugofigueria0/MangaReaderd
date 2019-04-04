@@ -47,4 +47,9 @@
     <string name="eliminar">Eliminar</string>
     <string name="cancelar2">Cancelar</string>
     <string name="adicionou">Adicionou:</string>
+    <string name="retroceder">Retroceder</string>
+    <string name="title_activity_ver_adicionar">See ADD</string>
+    <string name="Eliminar2">You Eliminate</string>
+    <string name="eliminado2">Eliminado2</string>
+    <string name="ELIMINAR">DELETE</string>
 </resources>

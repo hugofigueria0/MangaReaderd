@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 public class Eliminar extends AppCompatActivity {
 
@@ -16,5 +17,16 @@ public class Eliminar extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
+
+    public void Retroceder(View view){
+        Toast.makeText(this, R.string.cancelar, Toast.LENGTH_LONG).show();
+        finish();
+    }
+
+    public void Eliminar(View view){
+        Toast.makeText(this, R.string.Eliminar2, Toast.LENGTH_LONG).show();
+        finish();
+    }
+
 
 }

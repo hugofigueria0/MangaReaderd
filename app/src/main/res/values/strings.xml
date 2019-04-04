@@ -44,8 +44,11 @@
     <string name="title_activity_eliminar">Eliminar</string>
     <string name="title_activity_cancelar_2">Cancelar_2</string>
     <string name="Elimiar">Abriu a opção eliminar</string>
-    <string name="eliminar">Eliminar</string>
     <string name="cancelar2">Cancelar</string>
     <string name="title_activity_ver_adicionar">VerAdicionar</string>
     <string name="adicionou">Adicionou:</string>
+    <string name="retroceder">Retroceder</string>
+    <string name="Eliminar2">Foi Eliminado</string>
+    <string name="eleminado2">Eliminado2</string>
+    <string name="ELIMINAR">ELIMINAR</string>
 </resources>

@@ -14,35 +14,33 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="136dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/button_background"
         android:onClick="Adicionar"
         android:text="@string/adicionar_livro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/button_background"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Procura"
-        android:layout_width="wrap_content"
-        android:layout_height="47dp"
+        android:layout_width="122dp"
+        android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/button_background"
         android:onClick="Procura_Livros"
         android:text="Procura"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Adicionar"
-        android:background="@drawable/button_background"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/Adicionar" />
 
     <Button
         android:id="@+id/Voltar"
@@ -50,15 +48,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/button_background"
         android:onClick="Voltar"
         android:text="@string/voltar_atr_s"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Procura"
-        android:background="@drawable/button_background"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/Procura" />
 </android.support.constraint.ConstraintLayout>

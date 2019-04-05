@@ -52,4 +52,11 @@
     <string name="Eliminar2">You Eliminate</string>
     <string name="eliminado2">Eliminado2</string>
     <string name="ELIMINAR">DELETE</string>
+    <string name="title_activity_editar">Edit</string>
+    <string name="Editar">Enter Edit</string>
+    <string name="procura_2">Procura</string>
+    <string name="editar_2">Editar</string>
+    <string name="Foi_Editado">Sucess</string>
+    <string name="editar">Editar</string>
+    <string name="cancelar_3">Cancelar</string>
 </resources>

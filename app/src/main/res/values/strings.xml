@@ -51,4 +51,11 @@
     <string name="Eliminar2">Foi Eliminado</string>
     <string name="eleminado2">Eliminado2</string>
     <string name="ELIMINAR">ELIMINAR</string>
+    <string name="title_activity_editar">Editar</string>
+    <string name="Editar">Entrou no editar</string>
+    <string name="procura_2">Procura</string>
+    <string name="editar_2">Editar</string>
+    <string name="Foi_Editado">Editado com Sucesso</string>
+    <string name="editar">Editar</string>
+    <string name="cancelar_3">Cancelar</string>
 </resources>

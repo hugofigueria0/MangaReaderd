@@ -34,6 +34,12 @@ public class LivrosManga extends AppCompatActivity {
 
     }
 
+    public void Editar(View view){
+        Toast.makeText(this, R.string.Editar, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent( this, Editar.class);
+        startActivity(intent);
+    }
+
 
     public void Voltar(View view){
         Toast.makeText(this, R.string.Voltar, Toast.LENGTH_LONG).show();

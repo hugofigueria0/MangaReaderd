@@ -58,4 +58,11 @@
     <string name="Foi_Editado">Editado com Sucesso</string>
     <string name="editar">Editar</string>
     <string name="cancelar_3">Cancelar</string>
+    <string name="sair_da_aplica_o">Sair</string>
+    <string name="title_activity_inserir_favoritos">InserirFavoritos</string>
+    <string name="title_activity_favoritos_alterar">FavoritosAlterar</string>
+    <string name="inserir">Inserir</string>
+    <string name="alterar">Alterar</string>
+    <string name="title_activity_favoritos_eliminar">FavoritosEliminar</string>
+    <string name="eliminar">Eliminar</string>
 </resources>

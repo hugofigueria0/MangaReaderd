@@ -10,6 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".FavoritosEliminar"
+            android:label="@string/title_activity_favoritos_eliminar"
+            android:parentActivityName=".Favoritos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.mangareaderd.Favoritos" />
+        </activity>
+        <activity
+            android:name=".FavoritosAlterar"
+            android:label="@string/title_activity_favoritos_alterar"
+            android:parentActivityName=".Favoritos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.mangareaderd.Favoritos" />
+        </activity>
+        <activity
+            android:name=".InserirFavoritos"
+            android:label="@string/title_activity_inserir_favoritos"
+            android:parentActivityName=".Favoritos"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.mangareaderd.Favoritos" />
+        </activity>
+        <activity
             android:name=".Editar"
             android:label="@string/title_activity_editar"
             android:parentActivityName=".LivrosManga"

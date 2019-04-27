@@ -8,23 +8,24 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
-public class Eliminar extends AppCompatActivity {
+public class FavoritosEliminar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eliminar);
+        setContentView(R.layout.activity_favoritos_eliminar);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
 
-    public void Retroceder(View view){
+    public void FavoritosRetroceder(View view){
         Toast.makeText(this, R.string.cancelar, Toast.LENGTH_LONG).show();
         finish();
     }
 
-    public void Eliminar(View view){
+    public void EliminarFavoritos(View view){
         Toast.makeText(this, R.string.Eliminar2, Toast.LENGTH_LONG).show();
         finish();
     }
+
 }

@@ -59,4 +59,8 @@
     <string name="Foi_Editado">Sucess</string>
     <string name="editar">Editar</string>
     <string name="cancelar_3">Cancelar</string>
+    <string name="sair_da_aplica_o">Sair da aplicação</string>
+    <string name="inserir">Inserir</string>
+    <string name="alterar">Alterar</string>
+    <string name="eliminar">Eliminar</string>
 </resources>

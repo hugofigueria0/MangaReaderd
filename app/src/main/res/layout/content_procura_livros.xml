@@ -93,19 +93,18 @@
     <Button
         android:id="@+id/cancelar"
         android:layout_width="wrap_content"
-        android:layout_height="49dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
+        android:background="@drawable/button_background"
         android:onClick="Cancelar"
         android:text="@string/cancelar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.757"
         app:layout_constraintStart_toEndOf="@+id/validar2"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        android:background="@drawable/button_background"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
 </android.support.constraint.ConstraintLayout>

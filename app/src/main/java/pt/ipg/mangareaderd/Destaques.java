@@ -28,4 +28,27 @@ public class Destaques extends AppCompatActivity {
 
     }
 
+    public void InserirDestaque(View view){
+        Toast.makeText(this, R.string.Adicionar, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent( this, InserirDestaque.class);
+        startActivity(intent);
+
+    }
+
+    public void InserirAlterar(View view){
+        Toast.makeText(this, R.string.Adicionar, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent( this, InserirAlterar.class);
+        startActivity(intent);
+
+    }
+
+    public void DestaqueEliminar(View view){
+
+        Toast.makeText(this, (R.string.Elimiar), Toast.LENGTH_LONG).show();
+        Intent intent = new Intent( this, FavoritosEliminar.class);
+        startActivity(intent);
+
+    }
+
+
 }

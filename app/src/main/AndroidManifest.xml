@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".InserirAlterar"
+            android:label="@string/title_activity_inserir_alterar"
+            android:parentActivityName=".Destaques"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.mangareaderd.Destaques" />
+        </activity>
+        <activity
+            android:name=".InserirDestaque"
+            android:label="@string/title_activity_inserir_destaque"
+            android:parentActivityName=".Destaques"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pt.ipg.mangareaderd.Destaques" />
+        </activity>
+        <activity
             android:name=".FavoritosEliminar"
             android:label="@string/title_activity_favoritos_eliminar"
             android:parentActivityName=".Favoritos"

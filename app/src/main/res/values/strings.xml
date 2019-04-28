@@ -65,4 +65,11 @@
     <string name="alterar">Alterar</string>
     <string name="title_activity_favoritos_eliminar">FavoritosEliminar</string>
     <string name="eliminar">Eliminar</string>
+    <string name="title_activity_inserir_destaque">InserirDestaque</string>
+    <string name="eliminar4">eliminar4</string>
+    <string name="eliminarD">EliminarD</string>
+    <string name="eliminado2">Eliminate</string>
+    <string name="inserir_click">Inserir click</string>
+    <string name="title_activity_inserir_alterar">InserirAlterar</string>
+
 </resources>

@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
 
 public class BDTabelaManga implements BaseColumns {
 
-    public static final String Nome_Tabela = "NomeManga";
+    public static final String Nome_Tabela = "Manga";
     public static final String Nome_Genero = "Genero";
     public static final String Nome_Autor = "Autor";
     public static final String Nome_Data = "Data";
@@ -23,9 +23,9 @@ public class BDTabelaManga implements BaseColumns {
         db.execSQL(
                 "CREATE TABLE " + Nome_Tabela + "(" +
                         _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                        Nome_Genero + "TEXT NOT NULL," +
-                        Nome_Autor + "TEXT NOT NULL," +
-                        Nome_Data + "TEXT NOT NULL" +
+                        Nome_Genero + " TEXT NOT NULL," +
+                        Nome_Autor + " TEXT NOT NULL," +
+                        Nome_Data + " TEXT NOT NULL" +
                         ")"
         );
 

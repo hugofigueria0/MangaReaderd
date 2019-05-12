@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
 
 public class BDTabelaInserir implements BaseColumns {
 
-    public static final String Nome_Tabela = "NomeManga";
+    public static final String Nome_Tabela = "Destaques";
     public static final String Nome_Genero = "Genero";
     public static final String Nome_Autor = "Autor";
     public static final String Nome_Data = "Data";

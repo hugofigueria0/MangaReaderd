@@ -38,6 +38,7 @@ public class BdOpenHelp extends SQLiteOpenHelper {
         new BDTabelaFavorito(db).criar();
 
         new BDTabelaManga(db).criar();
+        
 
     }
 

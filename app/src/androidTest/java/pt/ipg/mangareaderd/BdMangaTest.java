@@ -23,7 +23,7 @@ public class BdMangaTest {
     public void apagaBaseDados(){
 
         getAppContext().deleteDatabase(BdOpenHelp.NOME_BASE_DADOS);
-        
+
 
     }
     @Test

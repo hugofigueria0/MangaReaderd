@@ -13,6 +13,8 @@ public class BDTabelaManga implements BaseColumns {
     public static final String Nome_Data = "Data";
     private SQLiteDatabase db;
 
+    public static final String[] TODAS_COLUNAS = new String[] { _ID, Nome_Genero, Nome_Autor, Nome_Data};
+
     public BDTabelaManga( SQLiteDatabase db){
         this.db = db;
 

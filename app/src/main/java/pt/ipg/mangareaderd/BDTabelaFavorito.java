@@ -13,6 +13,9 @@ public class BDTabelaFavorito implements BaseColumns {
     public static final String Nome_Data = "Data";
     private SQLiteDatabase db;
 
+    public static final String[] TODAS_COLUNAS = new String[] { _ID, Nome_Genero, Nome_Autor, Nome_Data};
+
+
     public BDTabelaFavorito (SQLiteDatabase db){
         this.db = db;
     }

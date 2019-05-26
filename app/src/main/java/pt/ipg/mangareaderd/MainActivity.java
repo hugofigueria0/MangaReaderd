@@ -1,18 +1,41 @@
 package pt.ipg.mangareaderd;
 
+
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import org.jetbrains.annotations.Nullable;
+
+public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+
+    private static final int ID_CURSO_LOADER_LIVROS = 0;
+
+
+    private RecyclerView recyclerViewLivros;
+    private AdaptadorLivros adaptadorLivros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportLoaderManager().initLoader(ID_CURSO_LOADER_LIVROS,null,this);
+
+        recyclerViewLivros = (RecyclerView) findViewById(R.id.recyclerViewLivros);
+
+        adaptadorLivros = new AdaptadorLivros(this);
+        recyclerViewLivros.setAdapter(adaptadorLivros);
+        recyclerViewLivros.setLayoutManager(new LinearLayoutManager(this));
     }
     public void ZonaDeDestaques(View view){
         Toast.makeText(this, (R.string.AbriuZona), Toast.LENGTH_LONG).show();
@@ -42,10 +65,36 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    @Override
+    protected void onResume() {
+        getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_LIVROS, null, this);
+
+        super.onResume();
+    }
+
     public void Sair(View view){
         finish();
     }
 
+    @NonNull
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+        CursorLoader cursorLoader = new CursorLoader(this, LivrosContentProvider.ENDERECO_DESTAQUES, BDTabelaInserir.TODAS_COLUNAS, null, null, BDTabelaInserir.Nome_Genero
+        );
+
+        return cursorLoader;
+    }
 
 
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+        adaptadorLivros.setCursor(data);
+    }
+
+
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+        adaptadorLivros.setCursor(null);
+    }
 }

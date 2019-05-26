@@ -3,6 +3,8 @@ package pt.ipg.mangareaderd;
 import android.content.ContentValues;
 import android.database.Cursor;
 
+// TABELA DA MANGA ---- AdapatadorLIvrosManga
+
 public class Inserir {
     private long id;
     private String Genero;

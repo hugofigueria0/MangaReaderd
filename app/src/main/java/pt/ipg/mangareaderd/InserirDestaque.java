@@ -1,21 +1,40 @@
 package pt.ipg.mangareaderd;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.loader.app.LoaderManager;
+
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class InserirDestaque extends AppCompatActivity {
 
+    private static final int ID_CURSO_LOADER_CATEGORIAS = 0;
+
+    private EditText textGenero;
+    private EditText textAutor;
+    private EditText textData;
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inserir_destaque);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        textGenero = (EditText) findViewById(R.id.textGenero);
+        textAutor = (EditText) findViewById(R.id.textAutor);
+        textData = (EditText) findViewById(R.id.textData);
+
+        getSupportLoaderManager().initLoader(ID_CURSO_LOADER_CATEGORIAS, null, (LoaderManager.LoaderCallbacks<Object>) this);
 
     }
 
@@ -72,5 +91,12 @@ public class InserirDestaque extends AppCompatActivity {
         Toast.makeText(this, R.string.cancelar, Toast.LENGTH_LONG).show();
         finish();
     }
+
+    protected void onResume() {
+        getSupportLoaderManager().restartLoader(ID_CURSO_LOADER_CATEGORIAS, null, (LoaderManager.LoaderCallbacks<Object>) this);
+
+        super.onResume();
+    }
+
 
 }

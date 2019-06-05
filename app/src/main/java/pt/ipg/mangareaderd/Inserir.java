@@ -2,6 +2,11 @@ package pt.ipg.mangareaderd;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.os.Bundle;
+import android.widget.EditText;
+import android.widget.Spinner;
+
+import androidx.appcompat.widget.Toolbar;
 
 // TABELA DA MANGA ---- AdapatadorLIvrosManga
 
@@ -72,4 +77,12 @@ public class Inserir {
 
 
     }
+
+    private static final int ID_CURSO_LOADER_CATEGORIAS = 0;
+
+    private EditText textGenero;
+    private EditText textAutor;
+    private EditText textData;
+
+
 }

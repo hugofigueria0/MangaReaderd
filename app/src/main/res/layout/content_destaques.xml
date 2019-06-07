@@ -9,69 +9,52 @@
     tools:showIn="@layout/activity_destaques">
 
     <Button
-        android:id="@+id/Procura"
-        android:layout_width="wrap_content"
+        android:id="@+id/Livros"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/button_background"
-        android:onClick="Procura"
-        android:text="@string/procura_Destaques"
+        android:onClick="livros"
+        android:text="Livros"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/InserirDestaque"
-        android:layout_width="wrap_content"
+        android:id="@+id/Compras"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:onClick="InserirDestaque"
-        android:text="@string/inserir"
+        android:background="@drawable/button_background"
+        android:onClick="Compras"
+        android:text="Compras"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Procura"
-        android:background="@drawable/button_background"/>
+        app:layout_constraintTop_toBottomOf="@+id/Livros" />
 
     <Button
-        android:id="@+id/InserirAlterar"
-        android:layout_width="wrap_content"
+        android:id="@+id/Manga"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:onClick="InserirAlterar"
-        android:text="@string/alterar"
+        android:background="@drawable/button_background"
+        android:onClick="Manga"
+        android:text="Manga"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InserirDestaque"
-        android:background="@drawable/button_background"/>
+        app:layout_constraintTop_toBottomOf="@+id/Compras" />
 
-    <Button
-        android:id="@+id/DestaqueEliminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:onClick="DestaqueEliminar"
-        android:text="@string/eliminarD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InserirAlterar"
-        android:background="@drawable/button_background"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

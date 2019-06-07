@@ -17,19 +17,19 @@ import androidx.annotation.Nullable;
 public class LivrosContentProvider extends ContentProvider {
 
     public static final String AUTHORITY = "pt.ipg.mangareaderd";
-    public static final String DESTAQUES= "Destaques";
-    public static final String FAVORITOS = "Favoritos";
+    public static final String DESTAQUES= "LIVROS";
+    public static final String LIVROS = "LIVROS";
     public static final String MANGA = "Manga";
 
     private static final Uri ENDERECO_BASE = Uri.parse("content://" + AUTHORITY);
     public static final Uri ENDERECO_DESTAQUES = Uri.withAppendedPath(ENDERECO_BASE, DESTAQUES);
-    public static final Uri ENDERECO_FAVORITOS = Uri.withAppendedPath(ENDERECO_BASE, FAVORITOS);
+    public static final Uri ENDERECO_LIVROS = Uri.withAppendedPath(ENDERECO_BASE, LIVROS);
     public static final Uri ENDERECO_MANGA = Uri.withAppendedPath(ENDERECO_BASE, MANGA);
 
     public static final int URI_DESTAQUES = 100;
     public static final int URI_DESTAQUES_ESPECIFICA = 101;
-    public static final int URI_FAVORITOS = 200;
-    public static final int URI_FAVORITOS_ESPECIFICO = 201;
+    public static final int URI_LIVROS = 200;
+    public static final int URI_LIVROS_ESPECIFICO = 201;
     public static final int URI_MANGA = 300;
     public static final int URI_MANGA_ESPECIFICO = 301;
 
@@ -43,8 +43,8 @@ public class LivrosContentProvider extends ContentProvider {
 
         uriMatcher.addURI(AUTHORITY, DESTAQUES, URI_DESTAQUES);
         uriMatcher.addURI(AUTHORITY, DESTAQUES + "/#", URI_DESTAQUES_ESPECIFICA);
-        uriMatcher.addURI(AUTHORITY, FAVORITOS, URI_FAVORITOS);
-        uriMatcher.addURI(AUTHORITY, FAVORITOS + "/#", URI_FAVORITOS_ESPECIFICO);
+        uriMatcher.addURI(AUTHORITY, LIVROS, URI_LIVROS);
+        uriMatcher.addURI(AUTHORITY, LIVROS + "/#", URI_LIVROS_ESPECIFICO);
         uriMatcher.addURI(AUTHORITY, MANGA, URI_MANGA);
         uriMatcher.addURI(AUTHORITY, MANGA + "/#", URI_MANGA_ESPECIFICO);
 
@@ -152,17 +152,17 @@ public class LivrosContentProvider extends ContentProvider {
         String id = uri.getLastPathSegment();
 
         switch (getUriMatcher().match(uri)) {
-            case URI_DESTAQUES:
+          /*  case URI_DESTAQUES:
                 return new BDTabelaInserir(bd).query(projection, selection, selectionArgs, null, null, sortOrder);
 
             case URI_DESTAQUES_ESPECIFICA:
                 return new BDTabelaInserir(bd).query(projection, BDTabelaInserir._ID + "=?", new String[] { id }, null, null, null);
+*/
+            case URI_LIVROS:
+                return new BDTabelaLivro(bd).query(projection, selection, selectionArgs, null, null, sortOrder);
 
-            case URI_FAVORITOS:
-                return new BDTabelaFavorito(bd).query(projection, selection, selectionArgs, null, null, sortOrder);
-
-            case URI_FAVORITOS_ESPECIFICO:
-                return  new BDTabelaFavorito(bd).query(projection, BDTabelaFavorito._ID + "=?", new String[] { id }, null, null, null);
+            case URI_LIVROS_ESPECIFICO:
+                return  new BDTabelaLivro(bd).query(projection, BDTabelaLivro._ID + "=?", new String[] { id }, null, null, null);
 
             case URI_MANGA:
                 return new BDTabelaManga(bd).query(projection, selection, selectionArgs, null, null, sortOrder);
@@ -171,7 +171,8 @@ public class LivrosContentProvider extends ContentProvider {
                 return  new BDTabelaManga(bd).query(projection, BDTabelaManga._ID + "=?", new String[] { id }, null, null, null);
 
             default:
-                throw new UnsupportedOperationException("URI inválida (QUERY): " + uri.toString());
+                return null;
+               // throw new UnsupportedOperationException("URI inválida (QUERY): " + uri.toString());
         }
     }
 
@@ -201,10 +202,10 @@ public class LivrosContentProvider extends ContentProvider {
                 return MULTIPLOS_ITEMS + DESTAQUES;
             case URI_DESTAQUES_ESPECIFICA:
                 return UNICO_ITEM + DESTAQUES;
-            case URI_FAVORITOS:
-                return MULTIPLOS_ITEMS + FAVORITOS;
-            case URI_FAVORITOS_ESPECIFICO:
-                return UNICO_ITEM + FAVORITOS;
+            case URI_LIVROS:
+                return MULTIPLOS_ITEMS + LIVROS;
+            case URI_LIVROS_ESPECIFICO:
+                return UNICO_ITEM + LIVROS;
             case URI_MANGA:
                 return MULTIPLOS_ITEMS + MANGA;
             case URI_MANGA_ESPECIFICO:
@@ -235,17 +236,18 @@ public class LivrosContentProvider extends ContentProvider {
         long id = -1;
 
         switch (getUriMatcher().match(uri)) {
-            case URI_DESTAQUES:
-                id = new BDTabelaInserir(bd).insert(values);
+           // case URI_DESTAQUES:
+             //   id = new BDTabelaInserir(bd).insert(values);
+               // break;
+
+            case URI_LIVROS:
+                id = new BDTabelaLivro(bd).insert(values);
                 break;
 
-            case URI_FAVORITOS:
-                id = new BDTabelaFavorito(bd).insert(values);
-                break;
 
-            case URI_MANGA:
+           /* case URI_MANGA:
                 id = new BDTabelaManga(bd).insert(values);
-                break;
+                break;*/
 
             default:
                 throw new UnsupportedOperationException("URI inválida (INSERT):" + uri.toString());
@@ -286,10 +288,10 @@ public class LivrosContentProvider extends ContentProvider {
         String id = uri.getLastPathSegment();
 
         switch (getUriMatcher().match(uri)) {
-            case URI_DESTAQUES_ESPECIFICA:
-                return new BDTabelaInserir(bd).delete( BDTabelaInserir._ID + "=?", new String[] {id});
-            case URI_FAVORITOS_ESPECIFICO:
-                return new BDTabelaFavorito(bd).delete(BDTabelaFavorito._ID + "=?", new String[] {id});
+            //case URI_DESTAQUES_ESPECIFICA:
+              //  return new BDTabelaInserir(bd).delete( BDTabelaInserir._ID + "=?", new String[] {id});
+            case URI_LIVROS_ESPECIFICO:
+                return new BDTabelaLivro(bd).delete(BDTabelaLivro._ID + "=?", new String[] {id});
             case URI_MANGA_ESPECIFICO:
                 return new BDTabelaManga(bd).delete(BDTabelaManga._ID + "=?", new String[] {id});
             default:
@@ -322,12 +324,12 @@ public class LivrosContentProvider extends ContentProvider {
         String id = uri.getLastPathSegment();
 
         switch (getUriMatcher().match(uri)) {
-            case URI_DESTAQUES_ESPECIFICA:
-                return new BDTabelaInserir(bd).update(values, BDTabelaInserir._ID + "=?", new String[] {id});
-            case URI_FAVORITOS_ESPECIFICO:
-                return new BDTabelaFavorito(bd).update(values, BDTabelaFavorito._ID + "=?", new String[] {id});
+           // case URI_DESTAQUES_ESPECIFICA:
+             //   return new BDTabelaInserir(bd).update(values, BDTabelaInserir._ID + "=?", new String[] {id});
+            case URI_LIVROS_ESPECIFICO:
+                return new BDTabelaLivro(bd).update(values, BDTabelaLivro._ID + "=?", new String[] {id});
             case URI_MANGA_ESPECIFICO:
-                return new BDTabelaFavorito(bd).update(values, BDTabelaManga._ID + "=?", new String[] {id});
+                return new BDTabelaLivro(bd).update(values, BDTabelaManga._ID + "=?", new String[] {id});
             default:
                 throw new UnsupportedOperationException("URI inválida (UPDATE): " + uri.toString());
         }

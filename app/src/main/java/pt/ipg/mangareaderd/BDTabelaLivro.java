@@ -5,19 +5,23 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
 
-public class BDTabelaInserir implements BaseColumns {
+public class BDTabelaLivro implements BaseColumns {
 
-    public static final String Nome_Tabela = "Destaques";
-    public static final String Nome_Genero = "Genero";
-    public static final String Nome_Autor = "Autor";
-    public static final String Nome_Data = "Data";
+    public static final String Nome_Tabela = "Livros";
+    public static final String Livro = "Livro";
+    public static final String Categoria= "Categoria";
+    public static final String Autor = "Autor";
+    public static final String Ano = "Ano";
+    public static final String Pagina = "Pagina";
     private SQLiteDatabase db;
 
-    public static final String[] TODAS_COLUNAS = new String[] { _ID, Nome_Genero, Nome_Autor, Nome_Data};
 
-    public BDTabelaInserir ( SQLiteDatabase db){
+
+    public static final String[] TODAS_COLUNAS = new String[] { _ID, Livro, Autor, Categoria, Ano, Pagina};
+
+
+    public BDTabelaLivro(SQLiteDatabase db){
         this.db = db;
-
     }
 
     public  void criar(){
@@ -25,15 +29,17 @@ public class BDTabelaInserir implements BaseColumns {
         db.execSQL(
                 "CREATE TABLE " + Nome_Tabela + "(" +
                         _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                        Nome_Genero + "TEXT NOT NULL," +
-                        Nome_Autor + "TEXT NOT NULL," +
-                        Nome_Data + "TEXT NOT NULL" +
+                        Livro + "TEXT NOT NULL," +
+                        Autor + "TEXT NOT NULL," +
+                        Categoria + "TEXT NOT NULL," +
+                        Ano + "INTEGER NOT NULL," +
+                        Pagina + "INTEGER NOT NULL" +
                         ")"
         );
 
     }
 
-  /*  public Cursor query (String[]columns, String selection, String[]selectionArg, String groupBy, String having, String orderBy){
+    public Cursor query (String[]columns, String selection, String[]selectionArg, String groupBy, String having, String orderBy){
         return db.query(Nome_Tabela, columns, selection, selectionArg, groupBy, having, orderBy);
     }
 
@@ -47,5 +53,5 @@ public class BDTabelaInserir implements BaseColumns {
     public int delete (String whereClause, String []whereArgs){
         return db.delete(Nome_Tabela, whereClause, whereArgs);
 
-    }*/
+    }
 }

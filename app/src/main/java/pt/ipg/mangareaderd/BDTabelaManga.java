@@ -33,8 +33,8 @@ public class BDTabelaManga implements BaseColumns {
 
     }
 
-    public Cursor query (String[]columns, String selection, String[]selectionArg, String groupby, String having, String orderBy){
-        return db.query(Nome_Tabela, columns, selection, selectionArg, groupby, having, orderBy);
+    public Cursor query (String[]columns, String selection, String[]selectionArg, String groupBy, String having, String orderBy){
+        return db.query(Nome_Tabela, columns, selection, selectionArg, groupBy, having, orderBy);
     }
 
     public long insert (ContentValues values){

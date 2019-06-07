@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class AdaptadorLivros extends RecyclerView.Adapter<AdaptadorLivros.ViewHolderDestaques> {
 
@@ -48,16 +49,64 @@ public class AdaptadorLivros extends RecyclerView.Adapter<AdaptadorLivros.ViewHo
 
         return cursor.getCount();
     }
+    public DESTAQUES1 getLivroSelecionado(){
+        if(ViewHolderLivroSelecionado == null) return null;
 
-    public class ViewHolderDestaques extends RecyclerView.ViewHolder {
+        return ViewHolderLivroSelecionado.destaques1;
+    }
+
+    private static ViewHolderDestaques ViewHolderLivroSelecionado = null;
+
+
+    public class ViewHolderDestaques extends RecyclerView.ViewHolder implements View.OnClickListener {
         private DESTAQUES1 destaques1;
+
+        private TextView textViewLivro;
+        private TextView textViewCategoria;
+        private TextView textViewPagina;
+        private TextView textViewEdicao;
+        private TextView textViewAutor;
 
         public ViewHolderDestaques(@androidx.annotation.NonNull View itemView) {
             super(itemView);
+            textViewLivro = (TextView)itemView.findViewById(R.id.textViewLivro);
+            textViewCategoria = (TextView)itemView.findViewById(R.id.textViewCategoria);
+            textViewPagina = (TextView)itemView.findViewById(R.id.textViewPagina);
+            textViewEdicao = (TextView)itemView.findViewById(R.id.textViewAno);
+            textViewAutor = (TextView)itemView.findViewById(R.id.textViewAutor);
+
+            itemView.setOnClickListener(this);
         }
 
         public void setDESTAQUES1(DESTAQUES1 destaques1) {
             this.destaques1 = destaques1;
+
+            textViewLivro.setText(destaques1.getNome());
+            textViewCategoria.setText(destaques1.getCategoria());
+            textViewPagina.setText(String.valueOf(destaques1.getPagina()));
+            textViewEdicao.setText(String.valueOf(destaques1.getAno()));
+            textViewAutor.setText(destaques1.getAutor());
+        }
+
+        private void desSeleciona() {
+            itemView.setBackgroundResource(android.R.color.white);
+        }
+
+        private void seleciona() {
+            itemView.setBackgroundResource(android.R.color.holo_red_dark);
+        }
+        @Override
+        public void onClick(View v) {
+            if(ViewHolderLivroSelecionado != null){
+                ViewHolderLivroSelecionado.desSeleciona();
+            }
+
+            ViewHolderLivroSelecionado = this;
+
+            ((DestaquesProcura) context).atualizaOpcoesMenu();
+
+            seleciona();
+        }
         }
     }
-}
+

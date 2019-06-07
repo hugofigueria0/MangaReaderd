@@ -33,9 +33,9 @@ public class BdOpenHelp extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        new BDTabelaInserir(db).criar();
+       // new BDTabelaInserir(db).criar();
 
-        new BDTabelaFavorito(db).criar();
+        new BDTabelaLivro(db).criar();
 
         new BDTabelaManga(db).criar();
 

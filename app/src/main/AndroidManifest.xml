@@ -153,6 +153,11 @@
         </activity>
 
 
+        <provider
+            android:authorities="pt.ipg.mangareaderd"
+            android:name=".LivrosContentProvider"
+            android:exported="false" />
+
     </application>
 
 </manifest>

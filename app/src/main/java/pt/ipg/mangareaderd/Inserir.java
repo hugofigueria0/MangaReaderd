@@ -78,11 +78,6 @@ public class Inserir {
 
     }
 
-    private static final int ID_CURSO_LOADER_CATEGORIAS = 0;
-
-    private EditText textGenero;
-    private EditText textAutor;
-    private EditText textData;
 
 
 }

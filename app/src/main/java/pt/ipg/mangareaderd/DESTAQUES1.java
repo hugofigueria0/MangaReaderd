@@ -5,10 +5,11 @@ import android.database.Cursor;
 
 public class DESTAQUES1 {
     private long id;
-    private String Genero;
+    private String Nome;
+    private String Categoria;
+    private int Pagina;
+    private int Ano;
     private String Autor;
-    private String Data;
-
 
     public long getId() {
         return id;
@@ -18,36 +19,61 @@ public class DESTAQUES1 {
         this.id = id;
     }
 
-    public String getGenero() {
-        return Genero;
+
+    public String getNome(){
+        return Nome;
+    }
+    public void setNome(String Nome){
+        this.Nome = Nome;
+
     }
 
-    public void setGenero(String genero) {
-        Genero = genero;
+
+    public String getCategoria(){
+
+        return Categoria;
+    }
+    public void setCategoria(String Categoria){
+        this.Categoria = Categoria;
     }
 
-    public String getAutor() {
+
+    public String getAutor(){
         return Autor;
     }
+    public void setAutor(String Autor){
+        this.Autor = Autor;
 
-    public void setAutor(String autor) {
-        Autor = autor;
     }
 
-    public String getData() {
-        return Data;
+
+    public int getAno(){
+        return Ano;
+    }
+    public void setAno(int Ano){
+        this.Ano = Ano;
     }
 
-    public void setData(String data) {
-        Data = data;
+    public int getPagina(){
+        return Pagina;
+    }
+    public void setPagina(int Pagina){
+        this.Pagina = Pagina;
+
     }
 
-    public ContentValues getContenteValues(){
+
+
+
+
+    public ContentValues getContentValues(){
         ContentValues valores = new ContentValues();
 
-        valores.put(BDTabelaInserir.Nome_Genero,Genero);
-        valores.put(BDTabelaInserir.Nome_Autor,Autor);
-        valores.put(BDTabelaInserir.Nome_Data,Data);
+        valores.put(BDTabelaLivro.Livro, Nome);
+        valores.put(BDTabelaLivro.Autor, Autor);
+        valores.put(BDTabelaLivro.Categoria,Categoria);
+        valores.put(BDTabelaLivro.Pagina,Pagina);
+        valores.put(BDTabelaLivro.Ano,Ano);
         return valores;
     }
 
@@ -55,16 +81,21 @@ public class DESTAQUES1 {
         DESTAQUES1 inserir = new DESTAQUES1();
 
         long id = cursor.getLong(
-                cursor.getColumnIndex(BDTabelaInserir._ID));
+                cursor.getColumnIndex(BDTabelaLivro._ID));
 
-        String genero = cursor.getString( cursor.getColumnIndex(BDTabelaInserir.Nome_Genero));
-        String Autor = cursor.getString( cursor.getColumnIndex(BDTabelaInserir.Nome_Autor));
-        String Data = cursor.getString( cursor.getColumnIndex(BDTabelaInserir.Nome_Data));
+        String Nome = cursor.getString( cursor.getColumnIndex(BDTabelaLivro.Livro));
+        String Autor = cursor.getString( cursor.getColumnIndex(BDTabelaLivro.Autor));
+        String Categoria = cursor.getString( cursor.getColumnIndex(BDTabelaLivro.Categoria));
+        Integer Ano = cursor.getInt(cursor.getColumnIndex(BDTabelaLivro.Ano));
+        Integer Pagina = cursor.getInt(cursor.getColumnIndex(BDTabelaLivro.Pagina));
+
 
         inserir.setId(id);
-        inserir.setGenero(genero);
+        inserir.setNome(Nome);
         inserir.setAutor(Autor);
-        inserir.setData(Data);
+        inserir.setCategoria(Categoria);
+        inserir.setCategoria(String.valueOf(Ano));
+        inserir.setPagina(Pagina);
 
         return inserir;
 
